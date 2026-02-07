@@ -1,46 +1,56 @@
-import React from 'react';
+ import React from 'react';
 import './Home.css';
 
 const Home = () => {
   return (
     <div className="home-container">
-      {/* Hero Section with Hero Image */}
-      <section className="home-hero">
-        <div className="hero-overlay">
-          <p className="sub-tag">LUXURY CARPETS & BESPOKE FLOOR ARTISTRY</p>
-          <h1 className="hero-title">Crafting statement floors for the world's most refined interiors.</h1>
+      {/* --- HERO SECTION --- */}
+      <section className="hero-section">
+        {/* Is overlay se image thodi dark hogi aur text clear dikhega */}
+        <div className="hero-overlay"></div> 
+        
+        <div className="hero-content">
+          <span className="hero-subtitle">LUXURY CARPETS & BESPOKE FLOOR ARTISTRY</span>
+          <h1 className="hero-title">
+            Crafting statement floors for the world's most refined interiors.
+          </h1>
+          <p className="hero-description">
+            Azal International curates premium carpets, rugs, and tailored floor solutions for 
+            hospitality, retail, and residential spaces.
+          </p>
           <div className="hero-btns">
             <button className="btn-gold">Explore Collections</button>
-            <button className="btn-outline-white">Talk to a Specialist</button>
+            <button className="btn-outline">Talk to a Specialist</button>
           </div>
         </div>
       </section>
 
-      {/* Featured Projects with Project Images */}
-      <section className="projects-section">
-        <h2 className="section-heading">Featured Projects</h2>
-        <div className="projects-grid">
-          
-          <div className="project-card">
-            <div className="img-container">
-               <img src="/project1.jpg" alt="Skyline Suites" />
-            </div>
-            <div className="project-info">
-              <h3>Skyline Suites</h3>
-              <p>MODERN LIVING</p>
-            </div>
+      {/* --- SERVICES SECTION --- */}
+      <section className="services-section">
+        <div className="section-header">
+          <span className="subtitle">EXCEPTIONAL CRAFTSMANSHIP</span>
+          <h2 className="title">Our Bespoke Services</h2>
+          <div className="gold-line"></div>
+        </div>
+
+        <div className="services-grid">
+          <div className="service-card">
+            <div className="service-icon">✦</div>
+            <h3>Bespoke Design</h3>
+            <p>Tailored flooring patterns designed exclusively for your space, blending artistic vision with functional elegance.</p>
           </div>
 
-          <div className="project-card">
-            <div className="img-container">
-               <img src="/project2.jpg" alt="Riviera Residences" />
-            </div>
-            <div className="project-info">
-              <h3>Riviera Residences</h3>
-              <p>HERITAGE COLLECTION</p>
-            </div>
+          <div className="service-card">
+            <div className="service-icon">✦</div>
+            <h3>Premium Installation</h3>
+            <p>Expert installation by master craftsmen, ensuring every tile and carpet is laid with millimeter precision.</p>
           </div>
 
+          <div className="service-card">
+            <div className="service-icon">✦</div>
+            <h3>Global Sourcing</h3>
+            <p>Direct access to the world's finest marbles and luxury carpets from exclusive international quarries.</p>
+          </div>
         </div>
       </section>
     </div>

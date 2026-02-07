@@ -1,76 +1,126 @@
-.home-container { 
-    background: #0c0c0c; 
-    width: 100%; 
-    color: #fff; 
+.home-container {
+  background-color: #000;
+  overflow-x: hidden;
 }
 
-/* Hero Image Section Fix */
-.home-hero {
-  height: 90vh; /* Puri screen lega */
+/* Hero Section with Background Image */
+.hero-section {
+  height: 100vh; /* Full screen height */
   width: 100%;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-              url('/hero.jpg'); /* Public folder se image uthayega */
+  position: relative;
+  /* Path update: Agar image public folder mein hai toh '/hero.jpg' use karein */
+  background-image: url('/hero.jpg'); 
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   padding: 0 10%;
 }
 
-.hero-title {
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1.1;
+/* Dark Overlay for Luxury Feel */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 50% darkness */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Text overlay ke upar rahega */
   max-width: 850px;
-  margin-bottom: 30px;
+}
+
+.hero-subtitle {
+  color: #c5a059;
+  letter-spacing: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.hero-title {
+  color: #fff;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  margin-bottom: 25px;
+  line-height: 1.1;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-description {
+  color: #dfdfdf;
+  font-size: 1.15rem;
+  margin-bottom: 45px;
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.hero-btns {
+  display: flex;
+  gap: 20px;
 }
 
 .btn-gold {
-  background: #b39359;
+  background-color: #c5a059;
+  color: #000;
   border: none;
-  padding: 12px 30px;
-  border-radius: 50px;
-  font-weight: bold;
-  margin-right: 15px;
+  padding: 16px 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.btn-outline-white {
+.btn-outline {
   background: transparent;
-  border: 1px solid #fff;
   color: #fff;
-  padding: 12px 30px;
-  border-radius: 50px;
+  border: 1px solid #fff;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
-/* Projects Grid Fix */
-.projects-section {
-  padding: 80px 10%;
+.btn-gold:hover { background-color: #e0b973; transform: scale(1.05); }
+.btn-outline:hover { background: #fff; color: #000; }
+
+/* Services Section Styling */
+.services-section {
+  padding: 100px 10%;
+  background: #0a0a0a;
+  text-align: center;
 }
 
-.projects-grid {
+.section-header .subtitle { color: #c5a059; letter-spacing: 2px; }
+.section-header .title { color: #fff; font-size: 2.8rem; margin: 15px 0; }
+.gold-line { width: 60px; height: 2px; background: #c5a059; margin: 0 auto 60px; }
+
+.services-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
 }
 
-.img-container {
-  width: 100%;
-  height: 450px;
-  overflow: hidden;
-  border: 1px solid #928a8a;
+.service-card {
+  padding: 50px 30px;
+  background: #111;
+  border: 1px solid #222;
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.img-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.service-card:hover {
+  border-color: #c5a059;
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
-.project-info h3 {
-  border-left: 3px solid #1fb6c1;
-  padding-left: 15px;
-  margin-top: 15px;
-}
+.service-icon { color: #c5a059; font-size: 2.5rem; margin-bottom: 25px; }
+.service-card h3 { color: #fff; font-size: 1.6rem; margin-bottom: 20px; }
+.service-card p { color: #999; line-height: 1.7; }
