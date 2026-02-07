@@ -1,0 +1,76 @@
+.home-container { 
+    background: #0c0c0c; 
+    width: 100%; 
+    color: #fff; 
+}
+
+/* Hero Image Section Fix */
+.home-hero {
+  height: 90vh; /* Puri screen lega */
+  width: 100%;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('/hero.jpg'); /* Public folder se image uthayega */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  max-width: 850px;
+  margin-bottom: 30px;
+}
+
+.btn-gold {
+  background: #b39359;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.btn-outline-white {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* Projects Grid Fix */
+.projects-section {
+  padding: 80px 10%;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.img-container {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  border: 1px solid #928a8a;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-info h3 {
+  border-left: 3px solid #1fb6c1;
+  padding-left: 15px;
+  margin-top: 15px;
+}

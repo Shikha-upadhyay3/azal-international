@@ -1,0 +1,23 @@
+.main-footer { background: #000; color: #fff; width: 100%; }
+
+.cta-banner {
+  background: #b39359;
+  padding: 50px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+}
+
+/* 4 Columns Fix */
+.footer-links-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 50px;
+  padding: 80px 10%;
+  text-align: left;
+}
+
+.footer-nav-col h4 { color: #fff; margin-bottom: 20px; text-transform: uppercase; }
+.footer-nav-col ul { list-style: none; padding: 0; }
+.footer-nav-col ul li { color: #888; margin-bottom: 12px; font-size: 0.9rem; }
