@@ -1,23 +1,19 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainLayout from './layout/MainLayout';
 import Home from './pages/Home';
-import AboutUs from './pages/AboutUs';
-import Collections from './pages/Collections';
-import Contact from './pages/Contact';
+import AboutUs from './pages/AboutUs'; 
+// Baki saare pages bhi import karein (Collections, Projects, etc.) [cite: 23-31]
 
 function App() {
   return (
     <Router>
       <Routes>
-        {/* MainLayout ke andar persistent Navbar aur Footer rahenge [cite: 15, 20] */}
+        {/* MainLayout ke andar saare pages aayenge [cite: 15-20] */}
         <Route path="/" element={<MainLayout />}>
-          <Route index element={<Home />} /> 
+          <Route index element={<Home />} />
           <Route path="about" element={<AboutUs />} />
-          <Route path="collections" element={<Collections />} />
-          <Route path="contact" element={<Contact />} />
+          {/* Day 2 ke baki routes yanha add karein */}
         </Route>
-
-        
       </Routes>
     </Router>
   );
