@@ -16,6 +16,8 @@ function App() {
           <Route path="collections" element={<Collections />} />
           <Route path="contact" element={<Contact />} />
         </Route>
+
+        
       </Routes>
     </Router>
   );
