@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import MainLayout from './layout/MainLayout'; // 'l' chota rakhein
-import Home from './pages/Home';              // 'p' chota rakhein
+import MainLayout from './layout/MainLayout'; // 'l' small rakhein
+import Home from './pages/Home';              // 'p' small rakhein
 import AboutUs from './pages/AboutUs'; 
 import Collections from './pages/Collections';
 import Contact from './pages/Contact';
