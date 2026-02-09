@@ -1,39 +1,41 @@
 import React, { useState } from 'react';
-import { products } from '../data/products'; 
+import { products } from '../data/products'; // Ensure ye file bani ho
 import './Collections.css';
 
 const Collections = () => {
-  const [searchTerm, setSearchTerm] = useState(""); 
+  const [searchTerm, setSearchTerm] = useState("");
 
-  
-  const filteredProducts = products.filter((val) => {
-    if (searchTerm === "") {
-      return val;
-    } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-               val.category.toLowerCase().includes(searchTerm.toLowerCase())) {
-      return val;
-    }
-  });
+  const filteredProducts = products.filter((item) =>
+    item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.category.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
-    <div className="collections-container">
-      <div className="search-section">
-        <h1>Our Premium Collections</h1>
+    <div className="collections-page">
+      <div className="collections-header">
+        <span className="gold-subtitle">OUR CATALOGUE</span>
+        <h1>Luxury Collections</h1>
         <input 
           type="text" 
-          placeholder="Search carpets by name or material..." 
-          onChange={(event) => setSearchTerm(event.target.value)} 
-        /> {/* Search Bar [cite: 69, 74] */}
+          placeholder="Search by name, material or category..." 
+          className="search-input"
+          onChange={(e) => setSearchTerm(e.target.value)}
+        /> [cite: 69, 74-78]
       </div>
 
       <div className="product-grid">
         {filteredProducts.map((product) => (
-          <div className="product-card" key={product.id}>
-            <img src={product.image} alt={product.name} /> {/* PNG Images  */}
-            <div className="product-details">
+          <div key={product.id} className="product-card">
+            <div className="img-container">
+              <img src={product.image} alt={product.name} /> [cite: 41-43]
+              <div className="overlay">
+                <button className="quick-view">Quick View</button> [cite: 72]
+              </div>
+            </div>
+            <div className="info">
               <h3>{product.name}</h3>
-              <p>{product.category}</p>
-              <button className="view-btn">Quick View</button> {/* Quick View [cite: 72, 164] */}
+              <p>{product.category} | {product.material}</p>
+              <span className="price">{product.price}</span>
             </div>
           </div>
         ))}
