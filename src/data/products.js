@@ -5,8 +5,7 @@ export const products = [
     category: "Hand Knotted",
     material: "Silk",
     price: "Premium",
-    image: "/project1.jpg",
-    description: "Meticulously handcrafted by skilled artisans using premium materials[cite: 1]."
+    image: "/project1.jpg"
   },
   {
     id: 2,
@@ -14,8 +13,7 @@ export const products = [
     category: "Hand Tufted",
     material: "Wool",
     price: "Luxury",
-    image: "/project2.jpg",
-    description: "Timeless techniques blended with contemporary styles[cite: 2]."
+    image: "/project2.jpg"
   },
   {
     id: 3,
@@ -23,8 +21,7 @@ export const products = [
     category: "Leather Carpets",
     material: "Leather",
     price: "Bespoke",
-    image: "/hero.jpg",
-    description: "Each leather carpet is hand-cut, stitched, and assembled by skilled craftsmen[cite: 10]."
+    image: "/hero.jpg"
   },
   {
     id: 4,
@@ -32,7 +29,6 @@ export const products = [
     category: "Jute Rugs",
     material: "Jute",
     price: "Eco-Friendly",
-    image: "/project1.jpg",
-    description: "Honoring traditional techniques and eco-friendly practices[cite: 2]."
+    image: "/project1.jpg"
   }
 ];
