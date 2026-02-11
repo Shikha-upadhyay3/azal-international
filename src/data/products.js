@@ -1,39 +1,38 @@
-// products.js - Ye aapka main product data hai [cite: 85-86]
 export const products = [
   {
     id: 1,
-    name: "Royal Persian Silk Rug",
-    category: "Hand-knotted",
-    material: "Pure Silk",
+    name: "Classic Hand Knotted Silk",
+    category: "Hand Knotted",
+    material: "Silk",
     price: "Premium",
-    image: "/project1.jpg", // Public folder se image uthayega
-    description: "Intricate Persian patterns for luxury living rooms."
+    image: "/project1.jpg",
+    description: "Meticulously handcrafted by skilled artisans using premium materials[cite: 1]."
   },
   {
     id: 2,
-    name: "Modern Minimalist Carpet",
-    category: "Machine-made",
+    name: "Modern Hand Tufted Wool",
+    category: "Hand Tufted",
     material: "Wool",
     price: "Luxury",
     image: "/project2.jpg",
-    description: "Clean lines and soft textures for modern offices."
+    description: "Timeless techniques blended with contemporary styles[cite: 2]."
   },
   {
     id: 3,
-    name: "Bespoke Golden Weave",
-    category: "Custom Rugs",
-    material: "Silk & Wool Mix",
+    name: "Exquisite Leather Carpet",
+    category: "Leather Carpets",
+    material: "Leather",
     price: "Bespoke",
     image: "/hero.jpg",
-    description: "Customized gold-threaded rugs for high-end hospitality."
+    description: "Each leather carpet is hand-cut, stitched, and assembled by skilled craftsmen[cite: 10]."
   },
   {
     id: 4,
-    name: "Classic Victorian Runner",
-    category: "Wall-to-wall",
-    material: "Synthetic Fiber",
-    price: "Standard",
+    name: "Natural Jute Flatweave",
+    category: "Jute Rugs",
+    material: "Jute",
+    price: "Eco-Friendly",
     image: "/project1.jpg",
-    description: "Durable and elegant runners for hallways."
+    description: "Honoring traditional techniques and eco-friendly practices[cite: 2]."
   }
 ];
