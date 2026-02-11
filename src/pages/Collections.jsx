@@ -3,38 +3,25 @@ import { products } from '../data/products';
 import './Collections.css';
 
 const Collections = () => {
-  const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
 
-  // Filter Logic: Search + Category
-  const filteredProducts = products.filter((item) => {
-    const matchesSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = activeCategory === "All" || item.category === activeCategory;
-    return matchesSearch && matchesCategory;
-  });
+  const categories = ["All", "Hand Knotted", "Hand Tufted", "Leather Carpets", "Jute Rugs", "Flatweaves"];
 
-  const categories = ["All", "Hand Knotted", "Hand Tufted", "Leather Carpets", "Jute Rugs"];
+  const filteredProducts = activeCategory === "All" 
+    ? products 
+    : products.filter(p => p.category === activeCategory);
 
   return (
-    <div className="collections-page">
+    <div className="collections-container">
       <div className="collections-header">
-        <h1>Our Exclusive Collections</h1>
-        <p>Elevate your space with a rug that is as unique as you are.</p>
+        <span className="gold-text">AZAL INTERNATIONAL</span>
+        <h1>OUR COLLECTIONS</h1>
         
-        {/* Search Bar */}
-        <input 
-          type="text" 
-          placeholder="Search carpets..." 
-          className="search-bar"
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-
-        {/* Filter Buttons */}
-        <div className="filter-tabs">
+        <div className="filter-buttons">
           {categories.map(cat => (
             <button 
               key={cat}
-              className={activeCategory === cat ? "btn-active" : "btn-filter"}
+              className={activeCategory === cat ? "active" : ""}
               onClick={() => setActiveCategory(cat)}
             >
               {cat}
@@ -43,17 +30,15 @@ const Collections = () => {
         </div>
       </div>
 
-      {/* Product Grid */}
-      <div className="product-grid">
-        {filteredProducts.map(product => (
-          <div key={product.id} className="product-card">
-            <div className="img-holder">
-               <img src={product.image} alt={product.name} />
+      <div className="products-grid">
+        {filteredProducts.map((product) => (
+          <div className="product-card" key={product.id}>
+            <div className="product-image">
+              <img src={product.image} alt={product.name} />
             </div>
-            <div className="product-info">
+            <div className="product-details">
               <h3>{product.name}</h3>
               <p>{product.category}</p>
-              <button className="q-view">Quick View</button>
             </div>
           </div>
         ))}
